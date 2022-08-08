@@ -40,7 +40,6 @@ public class VideoPlaybackManager: ObservableObject {
 }
 
 // Now, let's subscribe
-var subscribers: [AnyCancellable] = []
 let videoPlaybackManager = VideoPlaybackManager()
 let subscriber = videoPlaybackManager.statusPublisher
     .sink { statusAboutToBeSet in

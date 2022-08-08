@@ -34,7 +34,6 @@ public class VideoPlaybackManager: ObservableObject {
     }
 }
 //: notice the addition of the @Published property wrapper? This is what converts a property into a Combine publisher.
-var subscribers: [AnyCancellable] = []
 let videoPlaybackManager = VideoPlaybackManager()
 let subscriber = videoPlaybackManager.$status
     .sink { statusAboutToBeSet in
