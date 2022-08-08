@@ -1,32 +1,29 @@
 /*:
 ![Swift](swift-logo.png)
  # Subjects
- ## PassthroughSubject
+ ## PassthroughSubject and CurrentValueSubject
  */
+//: What if we don't want to use @Published property wrappers?
+//: After all, they force us to be notified *before* the event actually takes place.
+//:
+//: We can declare our own subject publisher to broadcast our messages for us 😀
 import Combine
-import Foundation
 import Darwin
-//: What if I don't want to use a @Published property wrapper?
-//: What if I want to recieve events *after* they have occured?
-
-// MARK: - AVFoundation Playback Events
-     
-
-enum PlayStatus {
-    case idle
-    case buffering
-    case readyToPlay
-    case playing
-    case finished
-}
 
 public class VideoPlaybackManager: ObservableObject {
+    enum PlayStatus {
+        case idle
+        case buffering
+        case readyToPlay
+        case playing
+        case finished
+    }
+    
     private(set) var status = PlayStatus.idle { didSet {
         statusPublisher.send(status)
         }
     }
-    let statusPublisher = PassthroughSubject<PlayStatus, Never>()
-    
+    let statusPublisher = PassthroughSubject<PlayStatus, Never>() // 👈
     
     func play() {
         status = .buffering
@@ -41,10 +38,11 @@ public class VideoPlaybackManager: ObservableObject {
         status = .finished
     }
 }
-//: notice the addition of the @Published property wrapper? This is what converts a property into a Combine publisher.
+
+// Now, let's subscribe
 var subscribers: [AnyCancellable] = []
 let videoPlaybackManager = VideoPlaybackManager()
-videoPlaybackManager.statusPublisher
+let subscriber = videoPlaybackManager.statusPublisher
     .sink { statusAboutToBeSet in
         print("Recieved new notification from Combine")
         let currentState = videoPlaybackManager.status
@@ -52,29 +50,13 @@ videoPlaybackManager.statusPublisher
         print("combine notified us of: \(statusAboutToBeSet)")
         
     }
-    .store(in: &subscribers)
-//: We have just implemented our Combine infrastructure. Let's test what happens when the status is changed.
+// ...and see what's printed to the console!
 videoPlaybackManager.play()
 // << 🔵 Run Point
-//: Take a look at the console 👀.
-//: We are recieving the event **before** the value has been set to the stored property. This is *very* important information because we will be reacting to an event **before** it has actually happened and taken effect.
+//: We're recieving events **after** the value has been set! 🥳
 //:
-//: @Published property wrappers are extremely simple to setup.
-//: ⚠️ Careful
-//: But be careful, because you probably *DON'T* want to react to an event **before** it has taken place.
-//: #thinkAboutIt 🤔
-//: Now, all we have to do is to tidy up a little
-subscribers.removeAll()
-//: And so, our answer is: yes 😀🙃.
-//: We are recieving the change *before* it has been set to the property 👍
-//: [Apple Docs - @Published](https://developer.apple.com/documentation/combine/published)
-/* Important Apple Quotes 👇
- ```
- Important
- The @Published attribute is class constrained. Use it with properties of classes, not with non-class types like structures.
- ```
- ```
- When the property changes, publishing occurs in the property’s willSet block, meaning subscribers receive the new value before it’s actually set on the property.
- ```
- */
+//: Our Pass Through Subject publisher is simply passing our value through the data stream to each subscriber. It doesn't get much simpler than that!
+//:
+//: - Experiment:
+//:  The `PassthroughSubject` publishes values as they change. However, the `CurrentValueSubject` publisher informs each new subscriber of the current value first, followed by new events. Change the publisher to a `CurrentValueSubject` and re-run the code. Do you see the current value printed in the console first?
 //: [Previous](@previous) | [Next](@next)

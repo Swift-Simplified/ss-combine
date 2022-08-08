@@ -8,15 +8,15 @@ import Combine // 👈 import the Combine framework
 import Darwin // to use the sleep() function
 //: Let's think of a scenario 🤔. We are going to make the next Netflix clalled StreamCentre and we will be streaming video to a paying audience. 📺👀
 //: The Combine framework is a great choice to create streams and react to the changes that are published.
-enum PlayStatus {
-    case idle
-    case buffering
-    case readyToPlay
-    case playing
-    case finished
-}
-
 public class VideoPlaybackManager: ObservableObject {
+    enum PlayStatus {
+        case idle
+        case buffering
+        case readyToPlay
+        case playing
+        case finished
+    }
+    
     @Published var status = PlayStatus.idle
     
     func play() {
@@ -36,7 +36,7 @@ public class VideoPlaybackManager: ObservableObject {
 //: notice the addition of the @Published property wrapper? This is what converts a property into a Combine publisher.
 var subscribers: [AnyCancellable] = []
 let videoPlaybackManager = VideoPlaybackManager()
-videoPlaybackManager.$status
+let subscriber = videoPlaybackManager.$status
     .sink { statusAboutToBeSet in
         print("Recieved new notification from Combine")
         let currentState = videoPlaybackManager.status
@@ -44,8 +44,7 @@ videoPlaybackManager.$status
         print("combine notified us of: \(statusAboutToBeSet)")
         
     }
-    .store(in: &subscribers)
-//: We have just implemented our Combine infrastructure. Let's test what happens when the status is changed.
+//: We have just implemented our Combine infrastructure. Let's test what happens when the status changes.
 videoPlaybackManager.play()
 // << 🔵 Run Point
 //: Take a look at the console 👀.
