@@ -4,6 +4,7 @@
         <page name='Sink'/>
         <page name='Sink Completion'/>
         <page name='Published Property Wrapper'/>
+        <page name='Subjects'/>
         <page name='License'/>
     </pages>
 </playground>
