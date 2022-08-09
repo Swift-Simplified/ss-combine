@@ -121,7 +121,7 @@ Recieved new status: finished
 ```
 
 ### CurrentValueSubject Publisher
-A `CurrentValueSubject` publisher behaves the same except it **also** emits the current value upon subscribing.
+A `CurrentValueSubject` publisher behaves the same except it **also** emits the *current* value upon subscribing.
 
 ```Swift
 public class VideoPlaybackManager: ObservableObject {
