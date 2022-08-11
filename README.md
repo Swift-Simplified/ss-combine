@@ -156,5 +156,18 @@ Recieved new status: playing
 Recieved new status: finished
 ```
 
-## Clone The Repo 👇👇🏼👇🏿
-Don't forget to clone (download) the repository, which contains interactive tutorials to try, test and teach these topics. 🤩😎🙌
+
+# 🤷🏼‍♂️
+
+Thanks 
+
+for reading
+
+@[MatthewpHarding](https://github.com/MatthewpHarding)
+
+*written for the `Swift` community*
+
+```Swift
+let myLife = [learning, coding, happiness] 
+```
+### 🧕🏻👨🏿‍💼👩🏼‍💼👩🏻‍💻👨🏼‍💼🧛🏻‍♀️👩🏼‍💻💁🏽‍♂️🕵🏻‍♂️🧝🏼‍♀️🦹🏼‍♀🧕🏾🧟‍♂️
