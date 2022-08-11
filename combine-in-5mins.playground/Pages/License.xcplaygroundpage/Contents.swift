@@ -1,6 +1,5 @@
 //: ![Swift](swift-logo.png)
 //: # The Swift Programming Language
-//: ## License
 /*:
 ## License
 IMPORTANT:  This software is supplied to you by Mathew Harding on his

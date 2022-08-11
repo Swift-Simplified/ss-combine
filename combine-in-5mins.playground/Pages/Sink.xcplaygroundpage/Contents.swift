@@ -38,4 +38,5 @@ occupations.append(["Tony": "Teacher"])
 //: The sink function also provides a completion event to be notified of errors and when the publisher stops emitting values.
 //:
 //: Click **next** below to continue to the next section.
+//:
 //: [Next](@next)
