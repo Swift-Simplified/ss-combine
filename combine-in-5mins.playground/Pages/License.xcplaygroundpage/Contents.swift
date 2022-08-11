@@ -4,7 +4,7 @@
 /*:
 ## License
 IMPORTANT:  This software is supplied to you by Mathew Harding on his
- GitHub.com repository in consideration of your agreement to the following
+GitHub.com repository in consideration of your agreement to the following
 terms, and your use, installation, modification or redistribution of
 this software constitutes acceptance of these terms.  If you do
 not agree with these terms, please do not use, install, modify or
