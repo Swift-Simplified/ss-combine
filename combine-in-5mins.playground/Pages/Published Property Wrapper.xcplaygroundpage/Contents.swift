@@ -2,7 +2,6 @@
 ![Swift](swift-logo.png)
  # @Published Property Wrapper
  ## Properties wrapped with @Published emit changes in the willSet property observer method. 👨🏻‍🏫
- ### Question: Are we recieving notifications *before* they have been applied to the property? 🤔
  */
 import Combine // 👈 import the Combine framework
 import Darwin // to use the sleep() function
@@ -49,22 +48,13 @@ videoPlaybackManager.play()
 //: Take a look at the console 👀.
 //: We are recieving the event **before** the value has been set to the stored property. This is *very* important information because we will be reacting to an event **before** it has actually happened and taken effect.
 //:
-//: @Published property wrappers are extremely simple to setup.
-//: ⚠️ Careful
-//: But be careful, because you probably *DON'T* want to react to an event **before** it has taken place.
-//: #thinkAboutIt 🤔
-//: Now, all we have to do is to tidy up a little
-subscribers.removeAll()
-//: And so, our answer is: yes 😀🙃.
-//: We are recieving the change *before* it has been set to the property 👍
-//: [Apple Docs - @Published](https://developer.apple.com/documentation/combine/published)
-/* Important Apple Quotes 👇
- ```
- Important
+//: ⚠️ @Published property wrappers are extremely simple to setup. But be careful, because you probably *DON'T* want to react to an event **before** it has taken place and that is what's happening here when we use the @Published property wrapper.
+//:
+
+/*: An Important Snippet From [Apple Documentation](https://developer.apple.com/documentation/combine/published)
+ 
  The @Published attribute is class constrained. Use it with properties of classes, not with non-class types like structures.
- ```
- ```
- When the property changes, publishing occurs in the property’s willSet block, meaning subscribers receive the new value before it’s actually set on the property.
- ```
- */
+ When the property changes, publishing occurs in the property’s willSet block, meaning **subscribers receive the new value before it’s actually set** on the property.
+*/
+
 //: [Previous](@previous) | [Next](@next)
