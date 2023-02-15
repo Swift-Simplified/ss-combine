@@ -1,8 +1,16 @@
-/*:
-![Swift](swift-logo.png)
- # Sink Completion
- ## The Sink function has is overloaded with a completion block parameter. The block is called upon successful completion or when an error has occured.
+/*: ![Swift](matt-harding-logo.png)
+ 
  */
+//: # Swift Simplified
+//: ## A Free Playground
+//: ## Demonstrating: Combine
+//: ![instructor](instructor.png) [*with Matthew Harding*](https://www.udemy.com/user/iosbfree/)
+//:
+//: Swift v5.7 | 🚀 *Simplified for fast learning*
+//:
+//: -------------------
+//: # Sink Completion
+//: The Sink function has is overloaded with a completion block parameter. The block is called upon successful completion or when an error has occured.
 import Combine // 👈 remember to import Combine
 //: The publisher will fire a completion block when all values have been published or an error has occured.
 var bucketListItems = ["skydiving", "travel", "triathalon", "snowboarding"].publisher
@@ -64,3 +72,14 @@ myBucketList.items.append("marriage")
 // << 🔵 Run Point
 
 //: [Previous](@previous) | [Next](@next)
+//:
+//: -------------------
+//: ## Created by [SwiftSimplified.com](https://www.swiftsimplified.com)
+//: This playground is intended as extra resource for students taking our Swift Simplified online course - or for anyone else learning Swift.
+//:
+//: ![instructor](instructor.png) Created by [Matthew Harding](https://github.com/MatthewpHarding) | [GitHub](https://github.com/MatthewpHarding)| [Website](https://www.swiftsimplified.com) | [Our Courses](https://www.udemy.com/user/iosbfree/)
+//:
+//: 🤩 *..let's live a better life, by learning Swift* 🛠
+//:
+//: ### 🧕🏻🙋🏽‍♂️👨🏿‍💼👩🏼‍💼👩🏻‍💻💁🏼‍♀️👨🏼‍💼🙋🏻‍♂️🙋🏻‍♀️👩🏼‍💻🙋🏿💁🏽‍♂️🙋🏽‍♀️🙋🏿‍♀️🧕🏾🙋🏼‍♂️
+

@@ -1,8 +1,16 @@
-/*:
-![Swift](swift-logo.png)
- # @Published Property Wrapper
- ## Properties wrapped with @Published emit changes in the willSet property observer method. 👨🏻‍🏫
+/*: ![Swift](matt-harding-logo.png)
+ 
  */
+//: # Swift Simplified
+//: ## A Free Playground
+//: ## Demonstrating: Combine
+//: ![instructor](instructor.png) [*with Matthew Harding*](https://www.udemy.com/user/iosbfree/)
+//:
+//: Swift v5.7 | 🚀 *Simplified for fast learning*
+//:
+//: -------------------
+//: # @Published Property Wrapper
+//: Properties wrapped with @Published emit changes in the willSet property observer method. 👨🏻‍🏫
 import Combine // 👈 import the Combine framework
 import Darwin // to use the sleep() function
 //: Let's think of a scenario 🤔. We are going to make the next Netflix clalled StreamCentre and we will be streaming video to a paying audience. 📺👀
@@ -58,3 +66,14 @@ videoPlaybackManager.play()
 */
 
 //: [Previous](@previous) | [Next](@next)
+//:
+//: -------------------
+//: ## Created by [SwiftSimplified.com](https://www.swiftsimplified.com)
+//: This playground is intended as extra resource for students taking our Swift Simplified online course - or for anyone else learning Swift.
+//:
+//: ![instructor](instructor.png) Created by [Matthew Harding](https://github.com/MatthewpHarding) | [GitHub](https://github.com/MatthewpHarding)| [Website](https://www.swiftsimplified.com) | [Our Courses](https://www.udemy.com/user/iosbfree/)
+//:
+//: 🤩 *..let's live a better life, by learning Swift* 🛠
+//:
+//: ### 🧕🏻🙋🏽‍♂️👨🏿‍💼👩🏼‍💼👩🏻‍💻💁🏼‍♀️👨🏼‍💼🙋🏻‍♂️🙋🏻‍♀️👩🏼‍💻🙋🏿💁🏽‍♂️🙋🏽‍♀️🙋🏿‍♀️🧕🏾🙋🏼‍♂️
+
