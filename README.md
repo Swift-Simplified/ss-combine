@@ -1,34 +1,19 @@
-# Combine In 5 Mins ⏰
+# Combine - in a Swift Playground 🛝
 
-Learn the new Combine framework in just 5 mins! Your first interactive Combine tutorial to teach you the basics. Make sure to clone the repo!
+[Download](https://github.com/MatthewpHarding/FREE-PLAYGROUND-combine/archive/refs/heads/main.zip) this Swift playground file to run the example given in [Xcode](https://developer.apple.com/xcode).
 
-## Sink 
-Combine uses publishers to emit values.
+## This Playground Teaches 👨🏻‍🏫
+How to use the Combine framework in order to publish and subscribe to events.
 
-We must subscribe to a publisher and respond to published events within a closure. The basic closure is called a sink 🚰
+Combine is an event publishing framework and broadcasts messages to subscribers who want to listen to changes in data. This Swift playground demonstrates how all the basics need to use Combine.
 
-```Swift 
-let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".publisher
-let alphabetSubscriber = alphabet.sink { character in
-    print(character)
-}
-```
-Output 
-
-```Swift 
-A
-B
-C
-D
-E
-//... and so on
-```
-## Sink Completion
-The Sink function has a completion block providing a completion status; `.finished` or `.failure`
+The code to publish and subscribe will look something like this:
 
 ```Swift
-var bucketListItems = ["skydiving", "travel", "triathalon", "snowboarding"].publisher
-let subscriber = bucketListItems.sink(receiveCompletion: { completion in
+// MARK: - 📦 Sourcecode
+```Swift
+var bucketListItems = ["skydiving", "travel", "triathalon", "snowboarding"]
+let subscriber = bucketListItems.publisher.sink(receiveCompletion: { completion in
     switch completion {
         case .finished:
             print("finished")
@@ -38,134 +23,25 @@ let subscriber = bucketListItems.sink(receiveCompletion: { completion in
 }, receiveValue: { bucketListItem in
     print(bucketListItem)
 })
-```
-Output 
-
-```Swift 
-skydiving
-travel
-triathalon
-snowboarding
-finished
-```
-## Published Property Wrapper
-Combine contains a property wrapper converting stored properties into a publisher!
-
-⚠️ Be careful though, as it emits values on `willSet` **not** `didSet`
-
-```Swift
-public class VideoPlaybackManager: ObservableObject {
-    enum PlayStatus {
-        case idle
-        case buffering
-        case readyToPlay
-        case playing
-        case finished
-    }
-    
-    @Published var status = PlayStatus.idle
-}
-
-let videoPlaybackManager = VideoPlaybackManager()
-let subscriber = videoPlaybackManager.$status
-    .sink { status in
-        print("Recieved new status: \(status)")
-    }
-```
-Output 
-
-```Swift 
-Recieved new status: idle
-Recieved new status: buffering
-Recieved new status: readyToPlay
-Recieved new status: playing
-Recieved new status: finished
+// << 🔵 Run Point
 ```
 
-## Subjects
-### PassThroughSubject Publisher
-Subjects are the main publishers. 
-A `PassThroughSubject` publisher simply passes values through the data stream to each subscriber.
+## How To Download ⬇️
+You can download this Swift playground by clicking the `Code` button at the top of this page. 
 
-```Swift
-public class VideoPlaybackManager: ObservableObject {
-    enum PlayStatus {
-        case idle
-        case buffering
-        case readyToPlay
-        case playing
-        case finished
-    }
-    
-    private(set) var status = PlayStatus.idle { didSet {
-        statusPublisher.send(status)
-        }
-    }
-    let statusPublisher = PassthroughSubject<PlayStatus, Never>() // 👈
-}
+## How To Run 🏃🏾‍♂️
+Swift playground files run within [Xcode](https://developer.apple.com/xcode) *(the tool used by developers to build apps)* and you simply need to double click the file.
 
-let videoPlaybackManager = VideoPlaybackManager()
-let subscriber = videoPlaybackManager.$status
-    .sink { status in
-        print("Recieved new status: \(status)")
-    }
-```
-Output 
+## Why Learn In A Playground 🛝
+Swift playgrounds allow for rapid developmemt and provide a very fast and fluid thought-to-code process. There is no time taken to compile, build or install an app to an iOS simulator. Instead, the compilation time is fast and results are viewed almost immediately. 
 
-```Swift 
-Recieved new status: idle
-Recieved new status: buffering
-Recieved new status: readyToPlay
-Recieved new status: playing
-Recieved new status: finished
-```
+The term "playground" is a very fitting name for both the feature and the file extension itself. It may be safe to assume that this feature was designed for "playing around"... or "learning" as we like to call it. 😆
 
-### CurrentValueSubject Publisher
-A `CurrentValueSubject` publisher behaves the same except it **also** emits the *current* value upon subscribing.
-
-```Swift
-public class VideoPlaybackManager: ObservableObject {
-    enum PlayStatus {
-        case idle
-        case buffering
-        case readyToPlay
-        case playing
-        case finished
-    }
-    
-    private(set) var status = PlayStatus.idle { didSet {
-        statusPublisher.send(status)
-        }
-    }
-    let statusPublisher = CurrentValueSubject<PlayStatus, Never>(.idle) // 👈
-}
-
-let videoPlaybackManager = VideoPlaybackManager()
-let subscriber = videoPlaybackManager.$status
-    .sink { status in
-        print("Recieved new status: \(status)")
-    }
-```
-Output 
-
-```Swift 
-Recieved new status: idle
-Recieved new status: buffering
-Recieved new status: readyToPlay
-Recieved new status: playing
-Recieved new status: finished
-```
-
-
-# 🤷🏼‍♂️
-
-Thanks 
-
-for reading
-
+## Thanks for reading 📖
+👨🏼‍💻
 @[MatthewpHarding](https://github.com/MatthewpHarding)
 
-*written for the `Swift` community*
+*written for the `Swift Simplified` learning community*
 
 ```Swift
 let myLife = [learning, coding, happiness] 
