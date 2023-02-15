@@ -11,7 +11,7 @@ The code to publish and subscribe will look something like this:
 
 ```Swift
 // MARK: - 📦 Sourcecode
-```Swift
+
 var bucketListItems = ["skydiving", "travel", "triathalon", "snowboarding"]
 let subscriber = bucketListItems.publisher.sink(receiveCompletion: { completion in
     switch completion {
