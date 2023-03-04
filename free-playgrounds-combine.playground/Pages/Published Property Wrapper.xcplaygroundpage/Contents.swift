@@ -64,11 +64,14 @@ videoPlaybackManager.play()
  The @Published attribute is class constrained. Use it with properties of classes, not with non-class types like structures.
  When the property changes, publishing occurs in the property’s willSet block, meaning **subscribers receive the new value before it’s actually set** on the property.
 */
-
+//:
+//: -------------------
 //: [Previous](@previous) | [Next](@next)
 //:
 //: -------------------
 //: ## Created by [SwiftSimplified.com](https://www.swiftsimplified.com)
+//: [SwiftSimplified.com](https://www.swiftsimplified.com)
+//:
 //: This playground is intended as extra resource for students taking our Swift Simplified online course - or for anyone else learning Swift.
 //:
 //: ![instructor](instructor.png) Created by [Matthew Harding](https://github.com/MatthewpHarding) | [GitHub](https://github.com/MatthewpHarding)| [Website](https://www.swiftsimplified.com) | [Our Courses](https://www.udemy.com/user/iosbfree/)
@@ -76,4 +79,3 @@ videoPlaybackManager.play()
 //: 🤩 *..let's live a better life, by learning Swift* 🛠
 //:
 //: ### 🧕🏻🙋🏽‍♂️👨🏿‍💼👩🏼‍💼👩🏻‍💻💁🏼‍♀️👨🏼‍💼🙋🏻‍♂️🙋🏻‍♀️👩🏼‍💻🙋🏿💁🏽‍♂️🙋🏽‍♀️🙋🏿‍♀️🧕🏾🙋🏼‍♂️
-

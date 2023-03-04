@@ -1,5 +1,14 @@
-//: ![Swift](swift-logo.png)
-//: # The Swift Programming Language
+/*: ![Swift](matt-harding-logo.png)
+ 
+ */
+//: # Swift Simplified
+//: ## A Free Playground
+//: ## Demonstrating: Combine
+//: ![instructor](instructor.png) [*with Matthew Harding*](https://www.udemy.com/user/iosbfree/)
+//:
+//: Swift v5.7 | 🚀 *Simplified for fast learning*
+//:
+//: -------------------
 /*:
 ## License
 IMPORTANT:  This software is supplied to you by Mathew Harding on his

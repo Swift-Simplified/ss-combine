@@ -12,8 +12,21 @@
 //: ## Welcome 👋🏿👋🏻👋🏽
 //: Welcome to a small playground demonstrating how to use the Combine framework.
 //:
-//: Execute the run points 🔵 below, edit and experiment with the code! Don't stop writing code until you can see why things work the way they do. #practice #practice #practice
+//: Execute the run points 🔵 below.
 //:
+//: Edit and experiment with the code!
+//:
+//: Don't stop writing code until you can see why things work the way they do.
+//-----code-play-area
+
+
+// #practice #practice #practice
+
+
+
+//-----code-play-area
+//:
+//: -------------------
 //: ## Sink - Subscribing to Events
 //: The example below creates a
 //:
@@ -52,7 +65,12 @@ occupations.publisher.append(["Tony": "Teacher"])
 //: Use this playground to play about and edit the code - have some fun! It's a great opportunity to practice something new. 👏🏼👏🏾👏
 //:
 //: -------------------
+//: [Previous](@previous) | [Next](@next)
+//:
+//: -------------------
 //: ## Created by [SwiftSimplified.com](https://www.swiftsimplified.com)
+//: [SwiftSimplified.com](https://www.swiftsimplified.com)
+//:
 //: This playground is intended as extra resource for students taking our Swift Simplified online course - or for anyone else learning Swift.
 //:
 //: ![instructor](instructor.png) Created by [Matthew Harding](https://github.com/MatthewpHarding) | [GitHub](https://github.com/MatthewpHarding)| [Website](https://www.swiftsimplified.com) | [Our Courses](https://www.udemy.com/user/iosbfree/)
@@ -60,4 +78,3 @@ occupations.publisher.append(["Tony": "Teacher"])
 //: 🤩 *..let's live a better life, by learning Swift* 🛠
 //:
 //: ### 🧕🏻🙋🏽‍♂️👨🏿‍💼👩🏼‍💼👩🏻‍💻💁🏼‍♀️👨🏼‍💼🙋🏻‍♂️🙋🏻‍♀️👩🏼‍💻🙋🏿💁🏽‍♂️🙋🏽‍♀️🙋🏿‍♀️🧕🏾🙋🏼‍♂️
-

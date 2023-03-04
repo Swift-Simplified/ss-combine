@@ -70,11 +70,14 @@ myBucketList.items.append("marriage")
 //}
 //myBucketList.status = .schedulingDates
 // << 🔵 Run Point
-
+//:
+//: -------------------
 //: [Previous](@previous) | [Next](@next)
 //:
 //: -------------------
 //: ## Created by [SwiftSimplified.com](https://www.swiftsimplified.com)
+//: [SwiftSimplified.com](https://www.swiftsimplified.com)
+//:
 //: This playground is intended as extra resource for students taking our Swift Simplified online course - or for anyone else learning Swift.
 //:
 //: ![instructor](instructor.png) Created by [Matthew Harding](https://github.com/MatthewpHarding) | [GitHub](https://github.com/MatthewpHarding)| [Website](https://www.swiftsimplified.com) | [Our Courses](https://www.udemy.com/user/iosbfree/)
@@ -82,4 +85,3 @@ myBucketList.items.append("marriage")
 //: 🤩 *..let's live a better life, by learning Swift* 🛠
 //:
 //: ### 🧕🏻🙋🏽‍♂️👨🏿‍💼👩🏼‍💼👩🏻‍💻💁🏼‍♀️👨🏼‍💼🙋🏻‍♂️🙋🏻‍♀️👩🏼‍💻🙋🏿💁🏽‍♂️🙋🏽‍♀️🙋🏿‍♀️🧕🏾🙋🏼‍♂️
-
