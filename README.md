@@ -9,7 +9,7 @@ Simplifying the official [Swift Language Guide](https://docs.swift.org/swift-boo
 # Use Combine 
 in a Swift playground 🛝
 
-[Download](https://github.com/MatthewpHarding/FREE-PLAYGROUND-combine/archive/refs/heads/main.zip) this Swift playground file to run the example given in [Xcode](https://developer.apple.com/xcode).
+[Download](https://github.com/Swift-Simplified/ss-combine/archive/refs/heads/main.zip) this Swift playground file to run the example given in [Xcode](https://developer.apple.com/xcode).
 
 ## This Playground Teaches 👨🏻‍🏫
 How to use the Combine framework in order to publish and subscribe to events.
