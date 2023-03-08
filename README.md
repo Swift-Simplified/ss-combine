@@ -1,6 +1,6 @@
 ![Swift](readme-images/swift-simplified-logo.png)
 
-[SwiftSimplified.com](find-my-swift-version.md) | [Swift.org](https://docs.swift.org).
+[SwiftSimplified.com](https://www.swiftsimplified.com) | [Swift.org](https://docs.swift.org).
 
 Simplifying the official [Swift Language Guide](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/) into [The Swift Handbook 📖](https://www.swiftsimplified.com/the-swift-handbook). 😍
 
